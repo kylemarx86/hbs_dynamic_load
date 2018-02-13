@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{!-- <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src='js/script.js'></script> --}}
+    </head>
+    <body>
+        <table>
+            <thead>
+                <th>name</th>
+                <th>weight</th>
+                <th>value</th>
+            </thead>
+            
+            <tbody id='items-body'>
+                {{#each items}}
+                    {{> table_row}}
+                {{/each }}
+            </tbody>
+        </table>
+    </body>
+    {{!-- <script src='js/script.js'></script> --}}
+</html>
