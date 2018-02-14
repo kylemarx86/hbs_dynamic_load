@@ -2,6 +2,7 @@
 
 const express = require('express');
 const hbs = require('hbs');
+const fs = require('fs');
 const port = process.env.PORT || 3000;
 var app = express();
 
@@ -11,44 +12,10 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.render('home.hbs', {
-        data: [
-            {
-                group: "simple weapons",
-                items: [
-                    {
-                        name: "sword",
-                        weight: 20,
-                        value: "25gp"
-                    },
-                    {
-                        name: "short sword",
-                        weight: 10,
-                        value: "5gp"
-                    }
-                ]
-            },
-            {
-                group: "martial weapons",
-                items: [
-                    {
-                        name: "sword",
-                        weight: 20,
-                        value: "25gp"
-                    },
-                    {
-                        name: "short sword",
-                        weight: 10,
-                        value: "5gp"
-                    },
-                    {
-                        name: "long sword",
-                        weight: 50,
-                        value: "250gp"
-                    }
-                ]
-            }
-        ]
+    // make request to items.json
+    fs.readFile(__dirname + '/public/data/items.json','utf8', (err, data) => {
+        if(err) throw err;
+        res.render('home.hbs', JSON.parse(data));
     });
 });
 
