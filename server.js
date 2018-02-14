@@ -12,21 +12,41 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.render('home.hbs', {
-        items: [
+        data: [
             {
-                name: "sword",
-                weight: 20,
-                value: "25gp"
+                group: "simple weapons",
+                items: [
+                    {
+                        name: "sword",
+                        weight: 20,
+                        value: "25gp"
+                    },
+                    {
+                        name: "short sword",
+                        weight: 10,
+                        value: "5gp"
+                    }
+                ]
             },
             {
-                name: "short sword",
-                weight: 10,
-                value: "5gp"
-            },
-            {
-                name: "long sword",
-                weight: 50,
-                value: "250gp"
+                group: "martial weapons",
+                items: [
+                    {
+                        name: "sword",
+                        weight: 20,
+                        value: "25gp"
+                    },
+                    {
+                        name: "short sword",
+                        weight: 10,
+                        value: "5gp"
+                    },
+                    {
+                        name: "long sword",
+                        weight: 50,
+                        value: "250gp"
+                    }
+                ]
             }
         ]
     });
