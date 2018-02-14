@@ -1,37 +1,42 @@
 {
     "data": [
         {
-            "group": "simple weapons",
+            "group": "Light Armor",
             "items": [
                 {
-                    "name": "sword",
-                    "weight": 20,
-                    "value": "25gp"
+                    "name": "leather",
+                    "cost": "10 gp",
+                    "weight": 10
                 },
                 {
-                    "name": "short sword",
-                    "weight": 10,
-                    "value": "5gp"
-                },
-                {
-                    "name": "long sword",
-                    "weight": 50,
-                    "value": "250gp"
+                    "name": "studded leather",
+                    "cost": "45 gp",
+                    "weight": 13
                 }
             ]
         },
         {
-            "group": "martial weapons",
+            "group": "Simple Melee Weapons",
             "items": [
                 {
-                    "name": "sword",
-                    "weight": 20,
-                    "value": "25gp"
+                    "name": "club",
+                    "cost": "1 sp",
+                    "weight": 2
                 },
                 {
-                    "name": "short sword",
-                    "weight": 10,
-                    "value": "5gp"
+                    "name": "dagger",
+                    "cost": "2 gp",
+                    "weight": 1
+                },
+                {
+                    "name": "greatclub",
+                    "cost": "2 sp",
+                    "weight": 10
+                },
+                {
+                    "name": "handaxe",
+                    "cost": "5 gp",
+                    "weight": 2
                 }
             ]
         }
